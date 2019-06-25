@@ -1,0 +1,3 @@
+// Example 1 - random number generator (between 1 and 6) - "rolling the dice"//
+
+var formulaForGeneratingRandomNumber = Math.floor(Math.random() * 6) + 1;
