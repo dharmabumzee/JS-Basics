@@ -1,3 +1,75 @@
+// Treehouse assignments
 // Example 1 - random number generator (between 1 and 6) - "rolling the dice"//
 
 var formulaForGeneratingRandomNumber = Math.floor(Math.random() * 6) + 1;
+
+
+// Example 2 - takes an array as an argument and prints it out, as an ordered list in HTML //
+
+function printList( list ) {
+  var listHTML = '<ol>';
+  for (var i = 0; i < list.length; i += 1) {
+    listHTML += '<li>' + list[i] + '</li>';
+  }
+  listHTML += '</ol>';
+  print(listHTML);
+}
+
+function print(html) {
+  document.write(html);
+}
+
+// Example 3 - useful array methods - checking if the item's in stock //
+
+var inStock = [ 'apples', 'eggs', 'milk', 'cookies', 'cheese', 'bread', 'lettuce', 'carrot', 'broccoli', 'pizza', 'potato', 'crackers', 'onion', 'tofu', 'frozen dinner', 'cucumber'];
+var search;
+
+function print(message) {
+  document.write( '<p>' + message + '</p>');
+}
+
+while (true) {
+  search = prompt("Search for a product in our store. Type 'list' to show all of the produce and 'quit' to exit");
+  search = search.toLowerCase();
+  if (search === 'quit') {
+    break;
+  } else if ( search === 'list') {
+    print(inStock.join(', ') );
+  } else {
+    if ( inStock.indexOf(search) > -1 ) {
+      print('Yes, we have ' + search + ' in the store.');
+    } else {
+      print(search + ' is not in stock.');
+    }
+  }
+  
+  // Example 4 - simple quiz using array
+  
+var questions = [
+  ["Who's the author of Into My Arms?", "Nick Cave"],
+  ["Who's the best female singer ever?", "Nina Simone"],
+  ["What does TVOTR stands for?", "Tv On The Radio"],
+];
+
+var correctAnswers = 0;
+var question;
+var answer;
+var response;
+var html;
+  
+function print(message) {
+  document.write(message);
+}
+
+
+for (var i = 0; i < questions.length; i++) {
+  question = questions[i][0];
+  answer = questions[i][1];
+  response = prompt(question);
+  if (response === answer) {
+    correctAnswers++;
+  }
+}
+
+html = "You got " + correctAnswers + " question(s) right.";
+print(html);
