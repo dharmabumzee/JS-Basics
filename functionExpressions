@@ -10,6 +10,7 @@ exec((something) => {
 
 
 
+
 // delaying execution with setTimeout()
 
 window.setTimeout((something) => {
@@ -18,16 +19,43 @@ window.setTimeout((something) => {
 
 
 
+
+
 // add event listener example //
 
 const listItems = document.getElementsByTagName('li');
 
-for ( let i = 0; i < listItems.length; i++) {
-listItems[i].addEventListener('mouseover', () => {
-                           listItems[i].textContent = listItems[i].textContent.toUpperCase();
+listItems.addEventListener('mouseover', () => {
+                           listItems.textContent = listItems.textContent.toUpperCase();
                            });
 
-listItems[i].addEventListener('mouseoout', () => {
-                           listItems[i].textContent = listItems[i].textContent.toLowerCase();
+listItems.addEventListener('mouseoout', () => {
+                           listItems.textContent = listItems.textContent.toLowerCase();
                            });
+
+
+
+
+// the event object //
+
+document.addEventListener('click', (event) => {
+  console.log(event.target);
+});
+
+
+
+
+
+// example - the code only runs for list elements 
+
+listDiv.addEventListener('mouseover', (event) => {
+  if (event.target.tagName == 'LI') {
+                           event.target.textContent = event.target.textContent.toUpperCase();
+  }
+                           });
+
+listDiv.addEventListener('mouseoout', (event) => {
+                         if (event.target.tagName == 'LI') {
+                           event.target.textContent = event.target.textContent.toLowerCase();
 }
+                           });
