@@ -7,3 +7,9 @@ function exec(func, arg) {
 exec((something) => {
   console.log(something);
 }, 'Greetings, everyone!');
+
+// delaying execution with setTimeout()
+
+window.setTimeout((something) => {
+  console.log(something);
+}, 3000, 'Greetings, everyone!');
