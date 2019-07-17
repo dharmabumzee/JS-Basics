@@ -2,7 +2,7 @@ function exec(func, arg) {
   func(arg);
 }
 
-//expression
+//function expression
 
 exec((something) => {
   console.log(something);
