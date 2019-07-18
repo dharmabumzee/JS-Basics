@@ -19,3 +19,6 @@ box.addEventListener('click', function() {
 $('.box').click(function() {
   alert('You clicked me with jQuery');
   });                   
+
+//
+$('#flashMessage').hide().slideDown(1000).delay(2000).slideUp();
