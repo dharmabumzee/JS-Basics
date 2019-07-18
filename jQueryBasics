@@ -7,3 +7,15 @@ jQuery('.box').hide();
 
 // 3.
 $('.box').hide();
+
+
+
+// 1.
+box.addEventListener('click', function() {
+  alert('You clicked me');
+}
+
+// 2.
+$('.box').click(function() {
+  alert('You clicked me with jQuery');
+  });                   
