@@ -1,0 +1,11 @@
+// 1.
+
+const box = document.querySelector('.box');
+box.style.display = 'none';
+
+// 2. 
+jQuery('.box').hide();
+
+// 3.
+
+$('.box').hide();
