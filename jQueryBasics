@@ -1,5 +1,4 @@
 // 1.
-
 const box = document.querySelector('.box');
 box.style.display = 'none';
 
@@ -7,5 +6,4 @@ box.style.display = 'none';
 jQuery('.box').hide();
 
 // 3.
-
 $('.box').hide();
