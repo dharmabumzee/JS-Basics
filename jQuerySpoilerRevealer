@@ -1,0 +1,38 @@
+// app.js - unobtrusive JavaScript
+
+$('.spoiler').on('click', 'button', function(event) {
+    $(this).prev().show();
+    $(this).hide();
+}); 
+
+// create the 'reveal spoiler' button
+const $button = $('<button>Reveal Spoiler</button>');
+// append the web page
+$('.spoiler').append($button);
+
+$('.spoiler span').hide();
+  
+// index.html
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Star Wars Spoilers</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<body>
+	<img src="img/deathstar.png" />
+	<p class="spoiler">
+		<span>Darth Vader is Luke Skywalker's Father! Noooooooooooo!</span>
+	</p>
+  	<p class="spoiler">
+		<span>wasuuuuop</span>
+	</p>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
+
+
+
+
