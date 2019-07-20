@@ -51,6 +51,21 @@ const $odd = $('a:odd');
 const $secureLinks = $('a[href^="https://"]');
 const $pdfs = $('a[href$=".pdf"]');
 
+// attributes
+
+$secureLinks.attr('target', '_blank'); // opens link in a new tab 
+
+// html alternative
+// <li><a target="_blank" href='https://learn.jquery.com/'>Learn jQuery</a></li>
+
+
+$pdfs.attr('download', true); // automatic download
+
+// html alternative
+// <li><a href='http://treehouse-project-downloads.s3.amazonaws.com/jquery-basics/jquery_cheatsheet.pdf' download>jQuery Cheatsheet</a></li>
+
+
+
 // index.html
 
 <!DOCTYPE html>
