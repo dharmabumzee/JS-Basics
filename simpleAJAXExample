@@ -64,3 +64,15 @@
   </div>
 </body>
 </html>
+
+
+// assignment checking if the server responds - xhr.status === 200 //
+
+var xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function() {
+  if ( xhr.readyState === 4 & xhr.status === 200) {
+    document.getElementById('sidebar').innerHTML = xhr.responseText;
+  }
+};
+xhr.open('GET', 'sidebar.html');
+xhr.send();
