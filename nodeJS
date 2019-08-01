@@ -17,6 +17,6 @@ const request = https.get(`https://teamtreehouse.com/${username}.json`, response
                 console.log(response.statusCode);
 
                 });   
-                // read the data
+// read the data
 // parse the data
 // print the data
