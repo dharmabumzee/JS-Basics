@@ -66,7 +66,7 @@ const users = process.argv.slice(2);
 users.forEach(getProfile);
 
 
-// version3 - handling errors
+// version3 - handling connection errors
 
 // Problem: We need a simple way to look at a user's badge count and JavaScript points
 // Solution: Use Node.js to connect to Treehouse's API to get profile information to print out
